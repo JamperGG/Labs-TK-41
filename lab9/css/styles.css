@@ -1,0 +1,82 @@
+
+/* Header container */
+#hero_container {
+  width: 100%;
+  display: block;
+}
+
+/* Main hero region */
+.region-hero {
+  position: relative;
+  width: 100%;
+}
+
+/* Hero section */
+#hero {
+  background: rgb(46,49,146) url("/sites/default/files/styles/hero/public/2025/3/20/news/30526/lptoprect.png?itok=tNhp35-_") no-repeat center top;
+  position: relative;
+  width: 100%;
+  min-height: 300px; /* Приклад */
+  color: #fff;
+}
+
+/* Overlay (напівпрозорий шар чи інший візуальний ефект) */
+.shadow {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+}
+
+/* Контейнер з текстом */
+#hero .container {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+/* Заголовок та посилання в герої */
+#hero h2 a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Приклад стилів для блоків */
+.block-views-blockfront-page-news-block-1 {
+  /* Ваші стилі */
+}
+
+/* Первинні стилі для shortcut-блоків */
+.shortcut-1,
+.shortcut-2,
+.shortcut-3,
+.shortcut-4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border: 1px solid #eee;
+  height: 100px; /* Приклад */
+}
+
+/* Прикладні стилі для заголовка shortcut */
+.shortcut-1 h2,
+.shortcut-2 h2,
+.shortcut-3 h2,
+.shortcut-4 h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+/* Приклади адаптивних сіток */
+.col-xs-6 {
+  width: 50%;
+  float: left;
+}
+
+@media (min-width: 576px) {
+  .col-sm-3 {
+    width: 25%;
+    float: left;
+}
