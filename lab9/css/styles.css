@@ -1,82 +1,130 @@
-
-/* Header container */
-#hero_container {
-  width: 100%;
-  display: block;
+/* styles.css */
+:root {
+  --main-blue: #1e3888;
+  --light-gray: #f8f8f8;
+  --text-color: #333;
 }
 
-/* Main hero region */
-.region-hero {
-  position: relative;
-  width: 100%;
-}
-
-/* Hero section */
-#hero {
-  background: rgb(46,49,146) url("/sites/default/files/styles/hero/public/2025/3/20/news/30526/lptoprect.png?itok=tNhp35-_") no-repeat center top;
-  position: relative;
-  width: 100%;
-  min-height: 300px; /* Приклад */
-  color: #fff;
-}
-
-/* Overlay (напівпрозорий шар чи інший візуальний ефект) */
-.shadow {
-  position: absolute;
-  top: 0;
-  right: 0;
-  left: 0;
-  bottom: 0;
-}
-
-/* Контейнер з текстом */
-#hero .container {
-  position: relative;
-  z-index: 1;
-  padding: 20px;
-}
-
-/* Заголовок та посилання в герої */
-#hero h2 a {
-  color: #fff;
-  text-decoration: none;
-}
-
-/* Приклад стилів для блоків */
-.block-views-blockfront-page-news-block-1 {
-  /* Ваші стилі */
-}
-
-/* Первинні стилі для shortcut-блоків */
-.shortcut-1,
-.shortcut-2,
-.shortcut-3,
-.shortcut-4 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  border: 1px solid #eee;
-  height: 100px; /* Приклад */
-}
-
-/* Прикладні стилі для заголовка shortcut */
-.shortcut-1 h2,
-.shortcut-2 h2,
-.shortcut-3 h2,
-.shortcut-4 h2 {
+body {
   margin: 0;
-  font-size: 1rem;
+  font-family: Arial, sans-serif;
 }
 
-/* Приклади адаптивних сіток */
-.col-xs-6 {
-  width: 50%;
-  float: left;
+.header {
+  background-color: var(--light-gray);
+  padding: 10px;
 }
 
-@media (min-width: 576px) {
-  .col-sm-3 {
-    width: 25%;
-    float: left;
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.header__logo img {
+  height: 80px;
+}
+
+.header__title {
+  flex: 1;
+  margin-left: 15px;
+}
+
+.header__name {
+  font-size: 20px;
+  background-color: var(--main-blue);
+  color: white;
+  padding: 5px 10px;
+  display: inline-block;
+}
+
+.header__controls {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.header__languages {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.header__search {
+  display: flex;
+}
+
+.header__search input {
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+
+.header__search-btn {
+  background-color: var(--main-blue);
+  color: white;
+  border: none;
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+.menu {
+  background-color: white;
+  border-top: 1px solid #ccc;
+  padding: 5px 10px;
+}
+
+.menu__list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
+
+.menu__item {
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Адаптивність */
+@media (max-width: 767px) {
+  .header__top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__controls {
+    align-items: center;
+  }
+
+  .menu__list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu__item {
+    margin: 5px 0;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .header__top {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .header__title {
+    margin: 10px;
+  }
+
+  .menu__list {
+    justify-content: space-around;
+  }
+}
+
+@media (min-width: 1024px) {
+  .menu__list {
+    justify-content: center;
+  }
 }
